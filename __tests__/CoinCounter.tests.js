@@ -1,13 +1,9 @@
-import CoinCounter from './../src/CoinCounter.js';
+import { calculateChange } from './../src/CoinCounter.js';
 
-describe('CoinCounter', () => {
-
+describe('calculateChange', () => {
   test('it should return the amount of quarters, dimes, nickels, and pennies into a string', () => {
-    const changeCount = new CoinCounter();
-    const amt = 107
-    const result = changeCount.calculateChange(amt);
-    //console.log(calculateChangeFunction(amt));
-    expect(result).toEqual("Your change is 4 quarters, 0 dimes, 1 nickels, 2 pennies");
+    const testChange = calculateChange(107)
+    expect(testChange).toEqual("Your change is 4 quarters, 0 dimes, 1 nickels, 2 pennies");
   })
 
 })
