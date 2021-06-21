@@ -18,4 +18,22 @@ export const calculateChange = (amt, i = 0, changeArray = []) => {
   }
 }
 
+//closure function for getting quarters only, note; only works if you run calculateChange first
+const quarterTotal = (startingAmount) => {
+  return (numberOfQuarters) => {
+    const quarterCashAmount = numberOfQuarters * 25
+    return `Out of ${startingAmount}, ${quartersCashAmount} is quarters`
+  }
+}
+quarterTotal(499)(19)
 
+
+//closure function for name and concat
+const greeting = (greetName) => {
+  return (greetName) => {
+    return greetName.Concat(calculateChange());
+  }
+}
+
+const min = greeting("min") =>
+min(30) = Min your change is quarter dimes nickels etc
